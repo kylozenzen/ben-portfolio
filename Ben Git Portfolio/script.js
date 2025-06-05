@@ -1,0 +1,1 @@
+console.log('Welcome to Ben Campbell\'s Portfolio!');
