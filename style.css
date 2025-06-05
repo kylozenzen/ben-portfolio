@@ -1,1 +1,402 @@
-body { font-family: sans-serif; background-color: #fff8f0; }
+
+body {
+  font-family: 'Comic Sans MS', 'Comic Neue', sans-serif;
+  background-color: #fdf6ee;
+  color: #432c5d;
+  margin: 0;
+  padding: 20px;
+  text-align: center;
+}
+
+nav {
+  background: #ffe0f0;
+  padding: 1rem;
+  border-radius: 25px;
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+nav a {
+  background: #fff9c4;
+  border: 2px dashed #ff70a6;
+  border-radius: 50px;
+  font-weight: bold;
+  color: #432c5d;
+  text-decoration: none;
+  padding: 0.5rem 1.2rem;
+  transition: all 0.3s ease;
+}
+
+nav a:hover {
+  background: #c8e6c9;
+  transform: scale(1.05) rotate(-1deg);
+}
+
+main {
+  max-width: 800px;
+  margin: auto;
+}
+
+.hero-card {
+  background: #fff3cd;
+  border: 2px dashed #fbc02d;
+  border-radius: 25px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.hero-card h1 {
+  font-size: 2rem;
+  color: #6b3fa0;
+}
+
+.hero-card p {
+  font-size: 1.1rem;
+}
+
+.sticky-note {
+  background: #c5e1a5;
+  border: 2px dashed #558b2f;
+  padding: 10px;
+  border-radius: 15px;
+  margin: 1rem auto;
+  max-width: 300px;
+  font-weight: bold;
+  box-shadow: 1px 1px 8px rgba(0,0,0,0.1);
+  transform: rotate(-1.5deg);
+}
+
+/* Grid layout for social and writing */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  justify-items: center;
+  padding: 2rem 1rem;
+}
+
+.insta-card, .writing-card {
+  background: #fff0f6;
+  border: 2px dashed #ff70a6;
+  border-radius: 15px;
+  padding: 1rem;
+  width: 100%;
+  max-width: 350px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  text-align: left;
+}
+
+.insta-card h2, .writing-card h2 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  color: #6b3fa0;
+}
+
+.writing-section {
+  margin-top: 2rem;
+}
+
+/* Floating doodle background layer */
+.floating-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  background-image: url('sparkles.svg'), url('scribble.svg');
+  background-repeat: repeat;
+  background-size: 150px;
+  opacity: 0.08;
+  animation: floatyBG 60s linear infinite;
+  z-index: -1;
+}
+
+/* Animate background movement */
+@keyframes floatyBG {
+  0% { background-position: 0 0; }
+  100% { background-position: 100vw 100vh; }
+}
+
+/* Section header fix */
+h2 {
+  display: block;
+  text-align: center;
+  margin: 2rem auto 1rem auto;
+  font-size: 1.5rem;
+  color: #4b2a63;
+}
+
+
+.stat-blocks {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+  padding: 0 1rem 2rem;
+}
+
+.stat-card {
+  background: #fff9c4;
+  border: 2px dashed #fdd835;
+  border-radius: 15px;
+  padding: 1rem;
+  min-width: 200px;
+  max-width: 240px;
+  text-align: center;
+  font-weight: bold;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  color: #5d4037;
+}
+
+
+/* Sticky Nav */
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: linear-gradient(to right, #fceaff, #e0ffff);
+}
+
+
+.social-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+
+.writing-box {
+  background-color: #1e1e2f;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.3);
+}
+
+/* Reapplied overrides */
+
+
+/* Ensure the social grid is truly grid-based */
+.social-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  justify-items: center;
+  padding: 2rem 1rem;
+}
+
+/* Define styling for each insta card */
+.insta-card {
+  background: #fffaf4;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  width: 100%;
+  max-width: 400px;
+  transition: transform 0.3s ease;
+}
+
+/* Add a hover effect */
+.insta-card:hover {
+  transform: scale(1.03);
+}
+
+/* Final social layout styles */
+
+
+/* Enforced final styles for the social grid */
+.social-grid {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)) !important;
+  gap: 2rem !important;
+  justify-items: center !important;
+  padding: 2rem !important;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Style for each card */
+.insta-card {
+  background: #fffaf4;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  width: 100%;
+  max-width: 400px;
+  transition: transform 0.3s ease;
+  box-sizing: border-box;
+}
+
+/* Ensure blockquotes don’t override width */
+.insta-card blockquote.instagram-media {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 0 auto;
+}
+
+.insta-card:hover {
+  transform: scale(1.03);
+}
+
+
+.writing-card:hover {
+  transform: scale(1.03);
+}
+
+/* Enforce two-column grid for writing sections */
+.writing-grid.two-col {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  justify-content: center;
+}
+
+/* Enforce two-column grid for writing sections */
+.writing-grid.two-col {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  justify-content: center;
+}
+
+
+/* Centered 2-column grid with fixed column width */
+.writing-grid.two-col {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 400px));
+  gap: 2rem;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+
+/* Download Resume Box Style */
+.download-resume-box {
+  background-color: #E0BBE4; /* pastel purple */
+  padding: 1rem 2rem;
+  margin: 2rem auto;
+  text-align: center;
+  border-radius: 12px;
+  max-width: 400px;
+}
+.download-resume-box a {
+  text-decoration: none;
+  color: #331144;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+.download-resume-box a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Navbar */
+.navbar {
+  position: relative;
+  background: linear-gradient(90deg, #f8c6ee, #c6e8ff); /* match original gradient */
+  padding: 1rem;
+}
+.hamburger {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.nav-links {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.nav-links li a {
+  text-decoration: none;
+  color: #331144;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  border: 2px dashed #ff3b6b;
+  border-radius: 12px;
+  background-color: #fff9e6;
+}
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: #fff9e6;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    padding: 1rem;
+  }
+  .nav-links.open {
+    display: flex;
+  }
+  .nav-links li {
+    margin-bottom: 0.5rem;
+  }
+}
+
+/* Responsive Navbar */
+.navbar {
+  position: relative;
+  background: linear-gradient(90deg, #f8c6ee, #c6e8ff);
+  padding: 1rem;
+}
+.hamburger {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.nav-links {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.nav-links li a {
+  text-decoration: none;
+  color: #331144;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  border: 2px dashed #ff3b6b;
+  border-radius: 12px;
+  background-color: #fff9e6;
+}
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: #fff9e6;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    padding: 1rem;
+  }
+  .nav-links.open {
+    display: flex;
+  }
+  .nav-links li {
+    margin-bottom: 0.5rem;
+  }
+}

@@ -149,60 +149,71 @@
   </nav>
   <header>
   </header>
+  <section class="section-header">
+   <h1>
+    🎬 Video Vault
+   </h1>
+   <p>
+    From livestreams to storyboards — enjoy my video-centric creations.
+   </p>
+  </section>
   <main>
-   <section class="home-hero" style="background:#fff3c4; border: 3px dashed orange; border-radius: 20px; padding: 2rem; text-align: center;">
-    <img alt="Ben Campbell" src="images/ben-profile.png" style="width: 160px; border-radius: 100px; margin-bottom: 1rem;"/>
+   <div class="video-embed">
+    <iframe allowfullscreen="" src="https://www.youtube.com/embed/videoseries?list=PLL2WQjE9eAhXH5MFo56T5nkyafcSSnUd5" title="San Antonio Zoo Playlist">
+    </iframe>
+   </div>
+   <section>
     <h2>
-     Hi, I'm Ben 👋
+     Video Production Skills
     </h2>
-    <p style="font-size: 1.2rem; margin-top: 0.5rem;">
-     Creative social media wizard &amp; marketer blending bold ideas, viral strategy &amp; just enough chaos to make brands unforgettable.
-    </p>
-    <p style="font-size: 1.2rem; margin-top: 0.5rem;">
-     Explore some of latest work across various marketing mediums in the menu above.
-    </p>
+    <div class="skills-grid">
+     <span class="tag">
+      Storyboarding
+     </span>
+     <span class="tag">
+      Content Strategy
+     </span>
+     <span class="tag">
+      Scripting
+     </span>
+     <span class="tag">
+      Editing
+     </span>
+     <span class="tag">
+      Producing
+     </span>
+     <span class="tag">
+      Post Production Management
+     </span>
+     <span class="tag">
+      Livestreaming
+     </span>
+    </div>
    </section>
-   <section class="real-stat-showcase" style="margin-top: 3rem;">
-    <h2 style="text-align: center; font-size: 2rem; margin-bottom: 1rem;">
-     📊 Social By The Numbers
+   <section>
+    <h2>
+     Software Experience
     </h2>
-    <div class="stats-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; max-width: 1000px; margin: 0 auto;">
-     <div class="stat-card" style="background: #fdf6fb; border: 3px dashed #ba9cd6; border-radius: 15px; padding: 1.2rem; font-weight: bold; text-align: center; font-size: 1rem;">
-      🔥 Over 6M followers managed!
-     </div>
-     <div class="stat-card" style="background: #fdf6fb; border: 3px dashed #ba9cd6; border-radius: 15px; padding: 1.2rem; font-weight: bold; text-align: center; font-size: 1rem;">
-      ✨ Blog hits up 12% YOY
-     </div>
-     <div class="stat-card" style="background: #fdf6fb; border: 3px dashed #ba9cd6; border-radius: 15px; padding: 1.2rem; font-weight: bold; text-align: center; font-size: 1rem;">
-      📊 470+ MILLION Impressions
-     </div>
-     <div class="stat-card" style="background: #fdf6fb; border: 3px dashed #ba9cd6; border-radius: 15px; padding: 1.2rem; font-weight: bold; text-align: center; font-size: 1rem;">
-      💬 15+ MILLION Interactions
-     </div>
-     <div class="stat-card" style="background: #fdf6fb; border: 3px dashed #ba9cd6; border-radius: 15px; padding: 1.2rem; font-weight: bold; text-align: center; font-size: 1rem;">
-      🎶 2+ MILLION Followers on TikTok
-     </div>
-     <div class="stat-card" style="background: #fdf6fb; border: 3px dashed #ba9cd6; border-radius: 15px; padding: 1.2rem; font-weight: bold; text-align: center; font-size: 1rem;">
-      📸 2nd Zoo to hit 1 MILLION on Instagram
-     </div>
-     <div class="stat-card" style="background: #fdf6fb; border: 3px dashed #ba9cd6; border-radius: 15px; padding: 1.2rem; font-weight: bold; text-align: center; font-size: 1rem;">
-      💰 $75k+ Social Ad Revenue
-     </div>
-     <div class="stat-card" style="background: #fdf6fb; border: 3px dashed #ba9cd6; border-radius: 15px; padding: 1.2rem; font-weight: bold; text-align: center; font-size: 1rem;">
-      ⏳ 6+ Years in Social Media
-     </div>
+    <div class="skills-grid">
+     <span class="tag">
+      Adobe Premiere
+     </span>
+     <span class="tag">
+      Adobe Photoshop
+     </span>
+     <span class="tag">
+      Canva
+     </span>
+     <span class="tag">
+      CapCut
+     </span>
+     <span class="tag">
+      Final Cut Pro
+     </span>
     </div>
    </section>
   </main>
-  <div class="download-resume-box">
-   <a download="" href="Ben_C-Resume-2025.pdf">
-    Download My Resume
-   </a>
-  </div>
   <footer>
-   <p>
-    "Responds faster than your ex after seeing your glow-up on Instagram" – My clients, probably
-   </p>
   </footer>
   <!-- Juice box counter -->
   <div id="juice-box-counter" style="position: fixed; bottom: 10px; left: 10px; background: #fff3; padding: 5px 10px; border-radius: 10px; font-size: 14px;">
@@ -218,15 +229,6 @@
   <script src="script.js">
   </script>
   <!-- Hidden Notepad -->
-  <div id="notepad" style="display:none;position:fixed;top:60px;left:50%;transform:translateX(-50%);width:80%;height:300px;background:#fff;border-radius:10px;box-shadow:0 0 10px rgba(0,0,0,0.2);z-index:999;padding:10px;">
-   <h3 style="margin-top:0;">
-    📝 Secret Notepad
-   </h3>
-   <textarea style="width:100%;height:80%;font-family:monospace;"></textarea>
-   <button onclick="document.getElementById('notepad').style.display='none'" style="margin-top:10px;">
-    Close
-   </button>
-  </div>
   <script>
    document.addEventListener('DOMContentLoaded', function() {
   const hamburger = document.querySelector('.hamburger');
