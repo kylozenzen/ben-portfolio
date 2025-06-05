@@ -1,242 +1,170 @@
+
 <!DOCTYPE html>
 <html lang="en">
- <head>
-  <meta charset="utf-8"/>
-  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-  <title>
-   Ben Campbell – Doodle Portfolio
-  </title>
-  <link href="style.css" rel="stylesheet"/>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Video Vault</title>
+  <link rel="stylesheet" href="style.css">
   <style>
-   .fake-stats li, .real-stats li {
-  padding: 0.3rem 0;
-  font-size: 1rem;
-  line-height: 1.6;
-}
-.fake-stats {
-  background: #fff9f9;
-  padding: 1.2rem;
-  border: 2px dashed #ff8aa1;
-  border-radius: 10px;
-  margin-bottom: 2rem;
-}
-.real-stats {
-  background: #f0f9ff;
-  padding: 1.2rem;
-  border: 2px solid #93c5fd;
-  border-radius: 10px;
-}
-  
-.real-stat-showcase {
-  text-align: center;
-  padding: 3rem 1rem;
-}
-.stat-boxes {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  justify-content: center;
-  margin-top: 2rem;
-}
-.stat-card {
-  padding: 1rem 1.5rem;
-  font-size: 1.1rem;
-  font-weight: 600;
-  border: 2px dashed #a855f7;
-  border-radius: 16px;
-  box-shadow: 3px 3px 0 rgba(0,0,0,0.1);
-  min-width: 250px;
-  max-width: 300px;
-}
-  
-.real-stat-showcase {
-  text-align: center;
-  padding: 3rem 1rem;
-}
-.stat-boxes {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1rem;
-  margin-top: 2rem;
-}
-.stat-card {
-  padding: 1rem 1.5rem;
-  font-size: 1.1rem;
-  font-weight: 600;
-  border: 2px dashed #a855f7;
-  border-radius: 16px;
-  box-shadow: 3px 3px 0 rgba(0,0,0,0.1);
-  min-width: 260px;
-  max-width: 320px;
-}
-  
-.real-stat-showcase {
-  text-align: center;
-  padding: 3rem 1rem;
-}
-.stat-boxes {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  justify-content: center;
-  gap: 1rem;
-  margin-top: 2rem;
-  max-width: 900px;
-  margin-left: auto;
-  margin-right: auto;
-}
-.stat-card {
-  padding: 1.2rem 1.5rem;
-  font-size: 1.1rem;
-  font-weight: 600;
-  border: 2px dashed #a855f7;
-  border-radius: 16px;
-  box-shadow: 3px 3px 0 rgba(0,0,0,0.1);
-}
-  
-.stat-boxes {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  justify-content: center;
-  gap: 1rem;
-  margin-top: 2rem;
-  max-width: 960px;
-  margin-left: auto;
-  margin-right: auto;
-}
-.stat-card {
-  width: 100%;
-  min-height: 100px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
+    .tag {
+      display: inline-block;
+      background-color: #774898;
+      color: #fff;
+      font-size: 0.75rem;
+      padding: 2px 8px;
+      border-radius: 6px;
+      margin-bottom: 0.5rem;
+    }
+    .video-thumb {
+      width: 100%;
+      height: 200px;
+      background-size: cover;
+      background-position: center;
+      border-radius: 8px;
+      position: relative;
+      cursor: pointer;
+    }
+    .video-thumb::before {
+      content: '';
+      display: block;
+      padding-top: 56.25%;
+    }
+    .video-thumb::after {
+      content: '▶';
+      font-size: 2rem;
+      color: white;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: rgba(0,0,0,0.6);
+      border-radius: 50%;
+      padding: 10px 14px;
+    }
+    .filter-btn {
+      margin: 0 0.5rem;
+      padding: 0.5rem 1rem;
+      border: none;
+      background: #eee;
+      cursor: pointer;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+    .filter-btn:hover {
+      background-color: #ccc;
+    }
+    .video-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2rem;
+      padding: 2rem;
+    }
+    .video-item {
+      background: #fff;
+      color: #000;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      padding: 1rem;
+    }
+    .video-item h3 {
+      font-size: 1rem;
+      margin-bottom: 0.5rem;
+    }
+    main {
+      padding: 2rem;
+      font-family: 'Comic Neue', cursive;
+      color: #2c1e3f;
+      background-color: #fff6ee;
+    }
+    h1, h2 {
+      text-align: center;
+    }
   </style>
- </head>
- <body>
-  <nav class="navbar">
-   <button aria-label="Toggle menu" class="hamburger">
-    ☰
-   </button>
-   <ul class="nav-links">
-    <li>
-     <a href="index.html">
-      🏠 Home
-     </a>
-    </li>
-    <li>
-     <a href="social.html">
-      📱 Social
-     </a>
-    </li>
-    <li>
-     <a href="writing.html">
-      ✍️ Writing
-     </a>
-    </li>
-    <li>
-     <a href="video.html">
-      🎬 Video
-     </a>
-    </li>
-    <li>
-     <a href="contact.html">
-      📞 Contact
-     </a>
-    </li>
-   </ul>
-  </nav>
-  <header>
-  </header>
-  <section class="section-header">
-   <h1>
-    🎬 Video Vault
-   </h1>
-   <p>
-    From livestreams to storyboards — enjoy my video-centric creations.
-   </p>
-  </section>
+</head>
+<body>
   <main>
-   <div class="video-embed">
-    <iframe allowfullscreen="" src="https://www.youtube.com/embed/videoseries?list=PLL2WQjE9eAhXH5MFo56T5nkyafcSSnUd5" title="San Antonio Zoo Playlist">
-    </iframe>
-   </div>
-   <section>
-    <h2>
-     Video Production Skills
-    </h2>
-    <div class="skills-grid">
-     <span class="tag">
-      Storyboarding
-     </span>
-     <span class="tag">
-      Content Strategy
-     </span>
-     <span class="tag">
-      Scripting
-     </span>
-     <span class="tag">
-      Editing
-     </span>
-     <span class="tag">
-      Producing
-     </span>
-     <span class="tag">
-      Post Production Management
-     </span>
-     <span class="tag">
-      Livestreaming
-     </span>
+    <h1>🎬 Video Vault</h1>
+    <p style="text-align: center;">From livestreams to storyboards — enjoy my video-centric creations.</p>
+
+    <h2>Video Production Skills</h2>
+    <p style="text-align: center;">Storyboarding · Content Strategy · Scripting · Filming · Editing · Producing · Post Production · Project Management · Livestreaming</p>
+
+    <h2>Software Experience</h2>
+    <p style="text-align: center;">Adobe Premiere · Final Cut Pro · CapCut · Canva · Adobe Photoshop</p>
+
+    <div id="video-filters" style="text-align: center; margin: 1rem;">
+      <button class="filter-btn" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="Codeup">Codeup</button>
+      <button class="filter-btn" data-filter="San Antonio Zoo">San Antonio Zoo</button>
     </div>
-   </section>
-   <section>
-    <h2>
-     Software Experience
-    </h2>
-    <div class="skills-grid">
-     <span class="tag">
-      Adobe Premiere
-     </span>
-     <span class="tag">
-      Adobe Photoshop
-     </span>
-     <span class="tag">
-      Canva
-     </span>
-     <span class="tag">
-      CapCut
-     </span>
-     <span class="tag">
-      Final Cut Pro
-     </span>
-    </div>
-   </section>
+
+    <section class="video-grid">
+      <div class="video-item" data-tag="Codeup">
+        <span class="tag">Codeup</span>
+        <h3>Codeup – Student Experience Team Overview</h3>
+        <div class="video-thumb" data-id="fIGYmHgtnHI"></div>
+      </div>
+      <div class="video-item" data-tag="Codeup">
+        <span class="tag">Codeup</span>
+        <h3>Codeup – Financial Aid Walkthrough and Overview</h3>
+        <div class="video-thumb" data-id="yY3gQb3aOw4"></div>
+      </div>
+      <div class="video-item" data-tag="Codeup">
+        <span class="tag">Codeup</span>
+        <h3>Codeup – Job Promise Social Media Video</h3>
+        <div class="video-thumb" data-id="abbcUgqDtoA"></div>
+      </div>
+      <div class="video-item" data-tag="San Antonio Zoo">
+        <span class="tag">San Antonio Zoo</span>
+        <h3>San Antonio Zoo – Fundraising Video</h3>
+        <div class="video-thumb" data-id="eBAaybiEfkw"></div>
+      </div>
+      <div class="video-item" data-tag="San Antonio Zoo">
+        <span class="tag">San Antonio Zoo</span>
+        <h3>San Antonio Zoo – End of Year Recap Video</h3>
+        <div class="video-thumb" data-id="QID9grQsAi8"></div>
+      </div>
+      <div class="video-item" data-tag="San Antonio Zoo">
+        <span class="tag">San Antonio Zoo</span>
+        <h3>San Antonio Zoo – Wildlife Rescue Sizzle Reel</h3>
+        <div class="video-thumb" data-id="Kau9MVfnTVU"></div>
+      </div>
+      <div class="video-item" data-tag="San Antonio Zoo">
+        <span class="tag">San Antonio Zoo</span>
+        <h3>San Antonio Zoo – Pen Pal Video Letter from Our Zoo School</h3>
+        <div class="video-thumb" data-id="QNOM9LmNyGM"></div>
+      </div>
+    </section>
   </main>
-  <footer>
-  </footer>
-  <!-- Juice box counter -->
-  <div id="juice-box-counter" style="position: fixed; bottom: 10px; left: 10px; background: #fff3; padding: 5px 10px; border-radius: 10px; font-size: 14px;">
-   Juice Boxes:
-   <span id="juice-count">
-    0
-   </span>
-   🧃
-   <button onclick="addJuice()">
-    +1
-   </button>
-  </div>
-  <script src="script.js">
-  </script>
-  <!-- Hidden Notepad -->
+
   <script>
-   document.addEventListener('DOMContentLoaded', function() {
-  const hamburger = document.querySelector('.hamburger');
-  const navLinks = document.querySelector('.nav-links');
-  hamburger.addEventListener('click', function() {
-    navLinks.classList.toggle('open');
-  });
-});
+    document.addEventListener("DOMContentLoaded", function() {
+      document.querySelectorAll('.video-thumb').forEach(thumb => {
+        const id = thumb.getAttribute('data-id');
+        thumb.style.backgroundImage = `url(https://img.youtube.com/vi/${id}/hqdefault.jpg)`;
+        thumb.addEventListener('click', () => {
+          const iframe = document.createElement('iframe');
+          iframe.src = `https://www.youtube.com/embed/${id}?autoplay=1`;
+          iframe.setAttribute('frameborder', '0');
+          iframe.setAttribute('allowfullscreen', '');
+          iframe.style.width = '100%';
+          iframe.style.height = '200px';
+          iframe.style.borderRadius = '8px';
+          thumb.replaceWith(iframe);
+        });
+      });
+
+      document.querySelectorAll('.filter-btn').forEach(button => {
+        button.addEventListener('click', () => {
+          const filter = button.getAttribute('data-filter');
+          document.querySelectorAll('.video-item').forEach(item => {
+            item.style.display = (filter === 'all' || item.getAttribute('data-tag') === filter) ? 'block' : 'none';
+          });
+        });
+      });
+    });
   </script>
- </body>
+</body>
 </html>
